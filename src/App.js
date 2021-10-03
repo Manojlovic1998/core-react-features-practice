@@ -1,5 +1,13 @@
 function App() {
-    return (<div>Initial App!</div>);
+    return (
+        <div>
+            <h1>My Todos</h1>
+            <h2>Title</h2>
+            <div>
+                <button>Delete</button>
+
+            </div>
+        </div>);
 }
 
 export default App;
