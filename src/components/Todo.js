@@ -1,9 +1,14 @@
+import {useState} from "react";
+
+import Modal from "./Modal";
+import Backdrop from "./Backdrop";
+
 function Todo(props) {
     const deleteHandler = () => {
-        console.log("Delete");
-        console.log(props.text);
+        setModalIsVisible(true);
     };
 
+    const [modalIsVisible, setModalIsVisible] = useState(false);
     return (
         <div>
             <div className={'card'}>
@@ -11,6 +16,8 @@ function Todo(props) {
                 <div className={'actions'}>
                     <button className={'btn'} onClick={deleteHandler}>Delete</button>
                 </div>
+                {modalIsVisible && <Modal/>}
+                {modalIsVisible && <Backdrop/>}
             </div>
         </div>
     );
