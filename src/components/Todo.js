@@ -5,7 +5,7 @@ import Backdrop from "./Backdrop";
 
 function Todo(props) {
     const deleteHandler = () => {
-        setModalIsVisible(true);
+        modalIsVisible ? setModalIsVisible(false) : setModalIsVisible(true);
     };
 
     const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -16,8 +16,8 @@ function Todo(props) {
                 <div className={'actions'}>
                     <button className={'btn'} onClick={deleteHandler}>Delete</button>
                 </div>
-                {modalIsVisible && <Modal/>}
-                {modalIsVisible && <Backdrop/>}
+                {modalIsVisible && <Modal onClick={deleteHandler}/>}
+                {modalIsVisible && <Backdrop onClick={deleteHandler}/>}
             </div>
         </div>
     );
