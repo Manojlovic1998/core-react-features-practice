@@ -14,8 +14,8 @@ function NewMeetupForm(props) {
 
         const formData = {
             "title": titleInput.current.value,
-            "titleInput": imageInput.current.value,
-            "image": addressInput.current.value,
+            "adress": addressInput.current.value,
+            "image": imageInput.current.value,
             "description": descriptionInput.current.value,
         };
         props.onAddMeetup(formData);
