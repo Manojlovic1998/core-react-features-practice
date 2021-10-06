@@ -18,7 +18,7 @@ function NewMeetupForm(props) {
             "image": addressInput.current.value,
             "description": descriptionInput.current.value,
         };
-        console.log(formData);
+        props.onAddMeetup(formData);
     }
 
 
@@ -38,7 +38,7 @@ function NewMeetupForm(props) {
                     <input type="text" required id={"address"} ref={addressInput}/>
                 </div>
                 <div className={classes.control}>
-                    <label htmlFor="description">Meetup Title</label>
+                    <label htmlFor="description">Meetup Description</label>
                     <textarea required rows={"5"} id={"description"} ref={descriptionInput} />
                 </div>
                 <div className={classes.actions}>
