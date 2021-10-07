@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-*Note: I have used Firebase in order to POST and GET data for this dummy project. If you clone the library make sure to
+*Note: I have used Firebase in order to POST and GET data for this dummy project. If you clone the repository make sure to
 set up a firebase account and change the "stashed_urls" with the url of your db.*
 
 ### `npm test`
